@@ -67,6 +67,14 @@ export default class ARScreen extends Component {
                     </View>)
                 }
 
+                <View style={{position: 'absolute',  left: 0, right: 0, bottom: 130, alignItems: 'center'}}>
+                    <TouchableHighlight style={localStyles.buttons}
+                                        onPress={this._takeScreenshot}
+                                        underlayColor={'#00000000'} >
+                        <Image source={require("./src/assets/camera.png")} style={{height: 70, width: 70, alignSelf: "center"}} />
+                    </TouchableHighlight>
+                </View>
+
 
 
                   <View style={{flex: 0.2, flexDirection: 'row', justifyContent: "center", alignItems: 'center', width: "100%"}}>
