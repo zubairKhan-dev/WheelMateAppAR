@@ -162,7 +162,7 @@ export default class ARScreen extends Component {
                 console.warn('Camera permission denied');
             }
         } catch (err) {
-            console.warn("screenShot captured");
+            console.warn(err);
         }
 
     }
