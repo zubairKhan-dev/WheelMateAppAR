@@ -21,6 +21,9 @@ export default class App extends React.Component {
         this.handleClick= this.handleClick.bind(this)
         this.navClick= this.navClick.bind(this)
         this.navClickTwo= this.navClickTwo.bind(this)
+        this.navBackHome= this.navBackHome.bind(this)
+        this.navBackfromAr= this.navBackfromAr.bind(this)
+        this.navBackfromAr2= this.navBackfromAr2.bind(this)
         console.log(this.state.loadingAr)
     }
 
@@ -58,6 +61,18 @@ export default class App extends React.Component {
         await this.setState({loadingAr2: true})
     }
 
+    async navBackHome() {
+        await this.setState({loadingWelcome: true, loadingNavigation: false, loadingAr: false, loadingAr2: false})
+    }
+
+    async navBackfromAr() {
+        await this.setState({loadingAr: false, loadingNavigation: true, loadingWelcome: false})
+    }
+
+    async navBackfromAr2() {
+        await this.setState({loadingAr2: false, loadingNavigation: true, loadingWelcome: false})
+    }
+
 
     render() {
         if (this.state.loadingTIL) {
@@ -72,13 +87,14 @@ export default class App extends React.Component {
             return <NavigationScreen
                 onPressUp={this.navClick}
                 onPressDown={this.navClickTwo}
+                onGoBack={this.navBackHome}
             />
         }
         else if (this.state.loadingAr==true) {
-            return  <ARScreen />
+            return  <ARScreen onClick={this.navBackfromAr} />
         }
         else if (this.state.loadingAr2==true) {
-            return  <ARScreenTwo />
+            return  <ARScreenTwo onClick={this.navBackfromAr2} />
         }
 
         else return null;

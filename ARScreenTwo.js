@@ -7,7 +7,7 @@ import {
     StyleSheet,
     TouchableHighlight,
     Image,
-    Alert,
+    Alert, TouchableOpacity,
 } from 'react-native';
 
 import {
@@ -50,7 +50,11 @@ export default class ARScreenTwo extends Component {
                                       initialScene={{scene:InitialARScene, passProps:{displayObject:this.state.displayObject}}}  viroAppProps={this.state.viroAppProps}
                 />
 
-                {this._renderTrackingText()}
+
+                    <TouchableOpacity style={{position: 'absolute', backgroundColor:"#ffffff22", left: 30, right: 30, top: 30, alignItems: 'center'}} onPress={this.props.onClick}>
+                        <Image source={require('./src/assets/reply-message.png')} style={{height: 50, width: 50}} />
+                    </TouchableOpacity>
+
 
                 {renderIf(this.state.isLoading,
                     <View style={{position:'absolute', left:0, right:0, top:0, bottom:0, alignItems: 'center', justifyContent:'center'}}>

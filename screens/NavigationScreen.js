@@ -3,6 +3,7 @@ import {View, Text, TouchableOpacity, Image, StyleSheet} from "react-native";
 import AppHeader from "../components/AppHeader";
 import theme from "../util/theme";
 import * as Animatable from 'react-native-animatable';
+import MaterialCommunityIcon from "react-native-paper/src/components/MaterialCommunityIcon";
 
 export default class NavigationScreen extends React.Component {
 
@@ -15,7 +16,12 @@ export default class NavigationScreen extends React.Component {
         return (
             <View style={{ flex: 1}}>
                 <Animatable.View animation={'slideInDown'}>
+                    <View style={{flexDirection: 'row', justifyContent: "center"}}>
+                        <TouchableOpacity style={{alignItems: "center", justifyContent: "center"}} onPress={this.props.onGoBack}>
+                            <Image source={require('../src/assets/reply-message.png')} style={{height: 30, width: 30}} />
+                        </TouchableOpacity>
                     <AppHeader name={"Navigation Screen"}/>
+                    </View>
                 </Animatable.View>
 
                 <View style={{flex: 0.5, alignItems: 'center', justifyContent: 'center'}}>

@@ -28,23 +28,24 @@ export default class Home extends React.Component {
         <AppHeader name={'WHEEL MATE'} />
         </Animatable.View>
 
-        <Animatable.View animation={'bounceIn'} delay={200}>
+
+
         <View style={{height: 160,width: 370, alignSelf: "center", marginTop: 25, borderRadius: 15, flexDirection: 'row', backgroundColor: 'white', elevation:7}}>
 
           <View style={{backgroundColor: 'black', borderRadius: 15, alignItems: 'center', justifyContent: 'center',height: 160, width: 150}}>
             <Image source={require('../src/assets/logo.png')} style={{height: '75%', width: '70%'}} />
           </View>
           <View style={{flex: 1, alignItems: 'center',padding:10}}>
-            <Animatable.View animation={'fadeIn'} delay={700}>
+            <Animatable.View animation={'fadeIn'} delay={200}  >
             <Text style={styles.regularText}>If safety concerns have led you to look for a handicap ramp for home why not choose
                   the safest walking surface and have a color choice too?</Text>
             </Animatable.View>
           </View>
 
         </View>
-        </Animatable.View>
 
-        <Animatable.View animation={"bounceIn"} delay={400}>
+
+
         <View style={{height: 450}}>
         <Swiper showsButtons={false} autoplay={true} >
           <View style={styles.slide1}>
@@ -52,7 +53,7 @@ export default class Home extends React.Component {
             <Image source={{uri: 'https://nationalramp.com/assets/media/homeaccess/2018/10/MainImg_0006_Victory_wide-1024x480.jpg'}}
                    style={{height: 200, width: 340, alignSelf: 'center', marginTop: 10, borderRadius: 15}}
             />
-            <Animatable.View animation={'fadeIn'} delay={700}>
+            <Animatable.View animation={'fadeIn'} delay={200} >
             <Text style={[styles.regularText, {alignSelf: 'center', marginTop: 10, paddingHorizontal:12}]}>
               This Wood Modular Deck si constructed of premium southern yellow pine and pressure treated to prevent rotting
             </Text>
@@ -63,7 +64,7 @@ export default class Home extends React.Component {
             <Image source={{uri: 'https://nationalramp.com/assets/media/homeaccess/2018/10/MainImg_0006_Victory_wide-1024x480.jpg'}}
                    style={{height: 200, width: 340, alignSelf: 'center', marginTop: 10, borderRadius: 15}}
             />
-            <Animatable.View animation={'fadeIn'} delay={700}>
+            <Animatable.View animation={'fadeIn'} delay={200}  >
             <Text style={[styles.regularText, {alignSelf: 'center', marginTop: 10, paddingHorizontal:12}]}>
              Whether you use a wheelchair or simply need some added assistance, the solid surface aluminium deck is the perfect solution for your home
             </Text>
@@ -74,7 +75,7 @@ export default class Home extends React.Component {
             <Image source={{uri: 'https://nationalramp.com/assets/media/homeaccess/2018/10/MainImg_0006_Victory_wide-1024x480.jpg'}}
                    style={{height: 200, width: 340, alignSelf: 'center', marginTop: 10, borderRadius: 15}}
             />
-            <Animatable.View animation={'fadeIn'} delay={700}>
+            <Animatable.View animation={'fadeIn'} delay={200} >
             <Text style={[styles.regularText, {alignSelf: 'center', marginTop: 10, paddingHorizontal:12}]}>
               National Ramp's commercial solid surface aluminium access ramps are the perfect solution for your business needs.
             </Text>
@@ -82,15 +83,15 @@ export default class Home extends React.Component {
           </View>
         </Swiper>
         </View>
-        </Animatable.View>
 
-          <Animatable.View animation={'bounceIn'} delay={600}>
+
+
           <TouchableOpacity style={styles.button} onPress={this.props.onPress}>
-            <Animatable.View animation={'fadeIn'} delay={700}>
+            <Animatable.View animation={'fadeIn'} delay={200} >
               <Text style={styles.buttonText}>Start Exploring</Text>
             </Animatable.View>
           </TouchableOpacity>
-          </Animatable.View>
+
 
 
         </View>

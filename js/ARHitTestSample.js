@@ -33,7 +33,7 @@ var ARHitTestSample = createReactClass({
       positionOne: [],
       positionTwo: [],
       positionThree: [],
-      getArea: 0
+      getArea: 0,
     }
   },
 
@@ -162,9 +162,29 @@ var ARHitTestSample = createReactClass({
     this.refs["arscene"].getCameraOrientationAsync().then((orientation) => {
       this.refs["arscene"].performARHitTestWithRay(orientation.forward).then((results)=>{
           this._onArHitTestResults(orientation.position, orientation.forward, results);
+          console.log(results)
+        if (results.length > 0) {
+          for (var i=0; i< results.length; i++) {
+            let result= results[i]
+            if (result.type== "ExistingPlaneUsingExtent")
+            {
+              console.log(result.transform.scale)
+              this.state.positionOne = result.transform.scale
+              console.log(this.state.scale)
+
+            }
+            else   {
+              console.log(result.transform.scale)
+              this.state.positionOne = result.transform.scale
+              console.log(this.state.scale)
+            }
+          }
+        }
       })
     });
     this.props.arSceneNavigator.viroAppProps._onLoadEnd();
+    alert("Cost= "+"Rs "+this.state.scale[0]+ '* cost/sqaure meter')
+
   },
 
   _onArHitTestResults(position, forward, results) {

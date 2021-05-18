@@ -53,7 +53,7 @@ var ARHitTest = createReactClass({
             <ViroARScene ref="arscene" onTrackingInitialized={this._onTrackInit} >
                 <ViroAmbientLight color="#ffffff" intensity={200}/>
                 <ViroARPlaneSelector minHeight={.5} minWidth={.5} onPlaneSelected={this._onFirstPlaneSelected}>
-                    <ViroBox position={[0, .25, 0]} scale={[.5, .5, .5]} materials={["grid"]} />
+                    <ViroBox position={[0, 0, 0]} scale={[.05, .05, .05]} materials={["grid"]} />
                 </ViroARPlaneSelector>
                 <ViroARPlaneSelector minHeight={.5} minWidth={.5} onPlaneSelected={this._onSecondPlaneSelected}>
                     <ViroBox position={[0, .25, 0]} scale={[.5, .5, .5]} materials={["grid"]} />
