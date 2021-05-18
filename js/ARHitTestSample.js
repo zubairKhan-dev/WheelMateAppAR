@@ -169,13 +169,13 @@ var ARHitTestSample = createReactClass({
             if (result.type== "ExistingPlaneUsingExtent")
             {
               console.log(result.transform.scale)
-              this.state.positionOne = result.transform.scale
+              this.state.scale = result.transform.scale
               console.log(this.state.scale)
 
             }
             else   {
               console.log(result.transform.scale)
-              this.state.positionOne = result.transform.scale
+              this.state.scale = result.transform.scale
               console.log(this.state.scale)
             }
           }
